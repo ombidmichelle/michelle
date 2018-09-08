@@ -7,8 +7,8 @@ if ( ! isset($_GET['name']) || strlen($_GET['name']) < 1  ) {
 }
 
 // If the user requested logout go back to index.php
-if ( isset($_POST['logout']) ) {
-    header('Location: index.php');
+if ( isset($_POST['view']) ) {
+    header('Location: autos2.php');
     return;
 }
 
@@ -59,7 +59,7 @@ echo $e->getMessage();
 <!DOCTYPE html>
 <html>
 <head>
-<title>Carlo's Autos Database</title>
+<title>Largo Autos Database</title>
 <?php require_once "bootstrap.php"; ?>
 </head>
 <style type="text/css">
@@ -87,7 +87,7 @@ Make: <input type="text" name="make"><br>
 Year: <input type="text" name="year"><br>
 Mileage: <input type="text" name="mileage"><br>
 <input type="submit" name="submit" value="Submit">
-<input type="submit" name="logout" value="Logout">
+<input type="submit" name="view" value="View">
 </form>
 <div>
 </div>
